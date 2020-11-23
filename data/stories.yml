@@ -1,0 +1,109 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: room booking simple
+  steps:
+  - intent: room_book
+  - action: utter_room_book
+  - intent: total_rooms
+  - action: utter_total_rooms
+  - intent: room_type_simple
+  - action: utter_room_type_simple
+
+- story: room booking deluxe
+  steps:
+  - intent: room_book
+  - action: utter_room_book
+  - intent: total_rooms
+  - action: utter_total_rooms
+  - intent: room_type_deluxe
+  - action: utter_room_type_deluxe
+
+- story: room cleaning rightnow
+  steps:
+  - intent: room_cleaning
+  - action: utter_room_cleaning
+  - intent: room_clean_rightnow
+  - action: utter_room_clean_rightnow
+
+- story: room cleaning scheduled
+  steps:
+  - intent: room_cleaning
+  - action: utter_room_cleaning
+  - intent: room_clean_schedule
+  - action: utter_room_clean_schedule
+
+
+- story : FAQ1
+  steps:
+  - intent: check_in_FAQ
+  - action: utter_check_in_FAQ1
+  - action: utter_check_in_FAQ2
+
+- story : FAQ2
+  steps:
+  - intent: check_out_FAQ
+  - action: utter_check_out_FAQ1
+  - action: utter_check_out_FAQ2
+
+- story : FAQ3
+  steps:
+  - intent: cancel_reservation
+  - action: utter_cancel_reservation1
+  - action: utter_cancel_reservation2
+
+- story : FAQ4
+  steps:
+  - intent: cancel_policy
+  - action: utter_cancel_policy
+
+- story : FAQ5
+  steps:
+  - intent: has_restaurant
+  - action: utter_has_restaurant
+
+
+- story : FAQ6
+  steps:
+  - intent: breakfast_availability
+  - action: utter_breakfast_availability
+
+- story : FAQ7
+  steps:
+  - intent: breakfast_timings
+  - action: utter_breakfast_timings
+
+- story : FAQ8
+  steps:
+  - intent: restaurant_timings
+  - action: utter_restaurant_timings
+
